@@ -20,7 +20,7 @@ private:
 
 };
 
-class float4 
+class float4
 {
 public:
 	float x;
@@ -72,11 +72,11 @@ public:
 
 	float4 Half() const
 	{
-		return {x * 0.5f, y * 0.5f , z * 0.5f, 1.0f};
+		return { x * 0.5f, y * 0.5f , z * 0.5f, 1.0f };
 	}
 
 public:
-	float4() 
+	float4()
 		: x(0.0f), y(0.0f), z(0.0f), w(1.0f)
 	{
 
@@ -107,7 +107,7 @@ public:
 	float4 Scale;
 
 public:
-	int CenterLeft() 
+	int CenterLeft()
 	{
 		return Pos.ix() - Scale.hix();
 	}

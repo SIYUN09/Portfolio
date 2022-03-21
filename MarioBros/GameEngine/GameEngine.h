@@ -19,7 +19,7 @@ public:
 	GameEngine& operator=(const GameEngine& _Other) = delete;
 	GameEngine& operator=(GameEngine&& _Other) noexcept = delete;
 
-	static inline GameEngineImage* BackBufferImage() 
+	static inline GameEngineImage* BackBufferImage()
 	{
 		return BackBufferImage_;
 	}
@@ -31,7 +31,7 @@ public:
 	virtual void GameEnd() = 0;
 
 	template<typename GameType>
-	static void Start() 
+	static void Start()
 	{
 		GameEngineDebug::LeakCheckOn();
 
@@ -42,7 +42,7 @@ public:
 		EngineEnd();
 	}
 
-	static GameEngine& GlobalEngine() 
+	static GameEngine& GlobalEngine()
 	{
 		if (nullptr == UserContents_)
 		{

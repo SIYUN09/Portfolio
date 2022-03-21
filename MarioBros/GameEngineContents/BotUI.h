@@ -21,4 +21,3 @@ private:
 	void Start() override;
 	void Render() override;
 };
-

@@ -9,7 +9,7 @@ GameEngineImage::GameEngineImage()
 {
 }
 
-GameEngineImage::~GameEngineImage() 
+GameEngineImage::~GameEngineImage()
 {
 	// window에서 할당해온녀석들은 릭으로 체크가 안되지만
 	// 지워주는게 깔끔하다.
@@ -34,14 +34,14 @@ GameEngineImage::~GameEngineImage()
 	}
 }
 
-bool GameEngineImage::Create(HDC _DC) 
+bool GameEngineImage::Create(HDC _DC)
 {
 	ImageDC_ = _DC;
 	ImageScaleCheck();
 	return true;
 }
 
-bool GameEngineImage::Create(float4 _Scale) 
+bool GameEngineImage::Create(float4 _Scale)
 {
 	if (true == _Scale.IsZero2D())
 	{
@@ -75,7 +75,7 @@ void GameEngineImage::ImageScaleCheck()
 	GetObject(CurrentBitMap, sizeof(BITMAP), &Info_);
 }
 
-void GameEngineImage::BitCopy(GameEngineImage* _Other) 
+void GameEngineImage::BitCopy(GameEngineImage* _Other)
 {
 	BitCopy(_Other, { 0, 0 }, { 0, 0 }, _Other->GetScale());
 }

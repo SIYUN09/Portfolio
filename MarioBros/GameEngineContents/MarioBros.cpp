@@ -1,20 +1,20 @@
-#include "StudyGame.h"
+#include "MrioBrosGame.h"
 #include "PlayLevel.h"
 #include "EndingLevel.h"
 #include "TitleLevel.h"
 #include <GameEngineBase/GameEngineWindow.h>
 
-StudyGame::StudyGame() 
+MarioBrosGame::MarioBrosGame()
 {
 }
 
-StudyGame::~StudyGame() 
+MarioBrosGame::~MarioBrosGame()
 {
 }
 
-void StudyGame::GameInit() 
+void MarioBrosGame::GameInit()
 {
-	GameEngineWindow::GetInst().SetWindowScaleAndPosition({ 100, 100 }, {1280, 720});
+	GameEngineWindow::GetInst().SetWindowScaleAndPosition({ 100, 100 }, { 1280, 720 });
 
 	CreateLevel<TitleLevel>("Title");
 	CreateLevel<PlayLevel>("Play");
@@ -22,11 +22,11 @@ void StudyGame::GameInit()
 	ChangeLevel("Play");
 }
 
-void StudyGame::GameLoop() 
+void MarioBrosGame::GameLoop()
 {
 
 }
-void StudyGame::GameEnd() 
+void MarioBrosGame::GameEnd()
 {
 
 }

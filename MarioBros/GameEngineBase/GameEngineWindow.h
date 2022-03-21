@@ -10,7 +10,7 @@ private:
 	static GameEngineWindow* Inst_;
 
 public:
-	inline static GameEngineWindow& GetInst() 
+	inline static GameEngineWindow& GetInst()
 	{
 		return *Inst_;
 	}
@@ -66,4 +66,3 @@ private:
 	GameEngineWindow& operator=(GameEngineWindow&& _Other) noexcept = delete;
 
 };
-

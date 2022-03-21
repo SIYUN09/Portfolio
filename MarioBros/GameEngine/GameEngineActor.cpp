@@ -2,13 +2,13 @@
 #include "GameEngine/GameEngine.h"
 #include <GameEngineBase/GameEngineWindow.h>
 
-GameEngineActor::GameEngineActor() 
+GameEngineActor::GameEngineActor()
 	: Level_(nullptr)
 {
 	// delete this;
 }
 
-GameEngineActor::~GameEngineActor() 
+GameEngineActor::~GameEngineActor()
 {
 }
 

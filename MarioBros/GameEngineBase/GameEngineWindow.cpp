@@ -31,7 +31,7 @@ LRESULT CALLBACK MessageProcess(HWND hWnd, UINT message, WPARAM wParam, LPARAM l
 
 GameEngineWindow* GameEngineWindow::Inst_ = new GameEngineWindow();
 
-GameEngineWindow::GameEngineWindow() 
+GameEngineWindow::GameEngineWindow()
     : hInst_(nullptr)
     , hWnd_(nullptr)
     , WindowOn_(true)
@@ -39,7 +39,7 @@ GameEngineWindow::GameEngineWindow()
 {
 }
 
-GameEngineWindow::~GameEngineWindow() 
+GameEngineWindow::~GameEngineWindow()
 {
     // 내가 만들어준게 아니라면 다 지워줘야 합니다.
     if (nullptr != HDC_)
@@ -55,7 +55,7 @@ GameEngineWindow::~GameEngineWindow()
     }
 }
 
-void GameEngineWindow::Off() 
+void GameEngineWindow::Off()
 {
     WindowOn_ = false;
 }
@@ -87,7 +87,7 @@ void GameEngineWindow::CreateGameWindow(HINSTANCE _hInst, const std::string& _Ti
     }
 
     Title_ = _Title;
-        // 클래스 등록은 1번만 하려고 친 코드
+    // 클래스 등록은 1번만 하려고 친 코드
     hInst_ = _hInst;
     RegClass(_hInst);
 
@@ -103,7 +103,7 @@ void GameEngineWindow::CreateGameWindow(HINSTANCE _hInst, const std::string& _Ti
     }
 }
 
-void GameEngineWindow::ShowGameWindow() 
+void GameEngineWindow::ShowGameWindow()
 {
     if (nullptr == hWnd_)
     {
@@ -156,7 +156,7 @@ void GameEngineWindow::MessageLoop(void(*_InitFunction)(), void(*_LoopFunction)(
     }
 }
 
-void GameEngineWindow::SetWindowScaleAndPosition(float4 _Pos, float4 _Scale) 
+void GameEngineWindow::SetWindowScaleAndPosition(float4 _Pos, float4 _Scale)
 {
     // 메뉴바 
 

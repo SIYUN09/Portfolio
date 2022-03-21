@@ -20,12 +20,12 @@ public:
 	bool Create(float4 _Scale);
 	bool Create(HDC _DC);
 
-	inline float4 GetScale() 
+	inline float4 GetScale()
 	{
-		return float4(static_cast<float >(Info_.bmWidth), static_cast<float>(Info_.bmHeight));
+		return float4(static_cast<float>(Info_.bmWidth), static_cast<float>(Info_.bmHeight));
 	}
 
-	inline HDC ImageDC() 
+	inline HDC ImageDC()
 	{
 		return ImageDC_;
 	}
@@ -35,7 +35,7 @@ public:
 	void BitCopy(GameEngineImage* _Other, const float4& _CopyPos, const float4& _OtherPivot, const float4& _OtherPivotScale);
 
 protected:
-	
+
 
 private:
 	HDC ImageDC_;
@@ -45,4 +45,3 @@ private:
 
 	void ImageScaleCheck();
 };
-

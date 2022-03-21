@@ -10,11 +10,11 @@ enum class ORDER
 	UI
 };
 
-PlayLevel::PlayLevel() 
+PlayLevel::PlayLevel()
 {
 }
 
-PlayLevel::~PlayLevel() 
+PlayLevel::~PlayLevel()
 {
 }
 
@@ -23,7 +23,7 @@ void PlayLevel::Loading()
 
 }
 
-void PlayLevel::Update() 
+void PlayLevel::Update()
 {
 
 }

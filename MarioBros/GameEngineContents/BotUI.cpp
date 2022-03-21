@@ -9,13 +9,13 @@ BotUI::~BotUI()
 }
 
 
-void BotUI::Start() 
+void BotUI::Start()
 {
-	SetPosition({640, 600});
+	SetPosition({ 640, 600 });
 	SetScale({ 1280, 200 });
 }
 
-void BotUI::Render() 
+void BotUI::Render()
 {
 	DebugRectRender();
 }

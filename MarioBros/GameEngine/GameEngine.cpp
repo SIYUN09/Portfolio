@@ -15,31 +15,31 @@ HDC GameEngine::BackBufferDC()
     return BackBufferImage_->ImageDC();
 }
 
-GameEngine::GameEngine() 
+GameEngine::GameEngine()
 {
 }
 
-GameEngine::~GameEngine() 
-{
-
-}
-
-void GameEngine::GameInit() 
+GameEngine::~GameEngine()
 {
 
 }
 
-void GameEngine::GameLoop() 
+void GameEngine::GameInit()
 {
 
 }
 
-void GameEngine::GameEnd() 
+void GameEngine::GameLoop()
 {
 
 }
 
-void GameEngine::WindowCreate() 
+void GameEngine::GameEnd()
+{
+
+}
+
+void GameEngine::WindowCreate()
 {
     GameEngineWindow::GetInst().CreateGameWindow(nullptr, "GameWindow");
     GameEngineWindow::GetInst().ShowGameWindow();
@@ -56,7 +56,7 @@ void GameEngine::EngineInit()
     BackBufferImage_ = GameEngineImageManager::GetInst()->Create("BackBuffer", GameEngineWindow::GetScale());
 
 }
-void GameEngine::EngineLoop() 
+void GameEngine::EngineLoop()
 {
     // 엔진수준에서 매 프레임마다 체크하고 싶은거
     UserContents_->GameLoop();
@@ -95,7 +95,7 @@ void GameEngine::EngineLoop()
 
 }
 
-void GameEngine::EngineEnd() 
+void GameEngine::EngineEnd()
 {
     UserContents_->GameEnd();
 

@@ -3,11 +3,11 @@
 
 GameEngineImageManager* GameEngineImageManager::Inst_ = new GameEngineImageManager();
 
-GameEngineImageManager::GameEngineImageManager() 
+GameEngineImageManager::GameEngineImageManager()
 {
 }
 
-GameEngineImageManager::~GameEngineImageManager() 
+GameEngineImageManager::~GameEngineImageManager()
 {
 	std::map<std::string, GameEngineImage*>::iterator StartIter = AllRes.begin();
 	std::map<std::string, GameEngineImage*>::iterator EndIter = AllRes.end();
@@ -22,7 +22,7 @@ GameEngineImageManager::~GameEngineImageManager()
 	}
 }
 
-GameEngineImage* GameEngineImageManager::Create(const std::string& _Name, HDC _DC) 
+GameEngineImage* GameEngineImageManager::Create(const std::string& _Name, HDC _DC)
 {
 	if (AllRes.end() != AllRes.find(_Name))
 	{
@@ -45,7 +45,7 @@ GameEngineImage* GameEngineImageManager::Create(const std::string& _Name, HDC _D
 	return NewImage;
 }
 
-GameEngineImage* GameEngineImageManager::Create(const std::string& _Name, float4 _Scale) 
+GameEngineImage* GameEngineImageManager::Create(const std::string& _Name, float4 _Scale)
 {
 	if (AllRes.end() != AllRes.find(_Name))
 	{
